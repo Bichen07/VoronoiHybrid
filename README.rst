@@ -1,7 +1,7 @@
 VoronoiHybrid: Efficient Voronoi Diagram for Spatial Partitioning
 ================================================================
 
-Basic Information 
+### **Basic Information** 
 ---------------------
 The Voronoi Diagram is a well know data structure in computetational geometry.
 used for partitioning a plane into regions based on distance to a set of points. 
@@ -12,7 +12,7 @@ such as spatial analysis, nearest-neighbor searches, and computational physics.
 
 The repository for the project will be housed at: https://github.com/Bichen07/VoronoiHybrid
 
-Problem to Solve
+### **Problem to Solve**
 ---------------------
 Voronoi Diagrams are used in diverse fields ranging from geography and robotics to machine learning. 
 Calculating Voronoi diagrams efficiently is crucial in large-scale simulations and real-time applications.
@@ -23,7 +23,7 @@ or when extended to 3D or higher dimensions. C++ is more suited for these heavy 
 The main problem VoronoiHybrid addresses is combining C++'s computational speed for constructing Voronoi diagrams with Python's ease of use 
 and data visualization libraries. We aim to achieve this without data duplication between the two languages, ensuring fast, efficient, and memory-optimal operations.
 
-Prospective Users
+### **Prospective Users**
 ---------------------
 The users of VoronoiHybrid will primarily be researchers, engineers, and developers in the following fields:
 
@@ -32,7 +32,7 @@ Robotics: For tasks such as path planning and sensor network design.
 Physics Simulations: Modeling atomic structures or simulating particle interactions.
 Machine Learning: For clustering, nearest-neighbor searches, and boundary definitions.
 
-System Architecture
+### **System Architecture**
 ---------------------
 The VoronoiHybrid system will be composed of two main parts:
 
@@ -45,7 +45,7 @@ such as Matplotlib for visualization and NumPy for data manipulation.
 This interface will allow users to compute Voronoi diagrams from Python without significant performance penalties or memory duplication.
 
 
-API Description
+### **API Description**
 ---------------------
 The project will expose a VoronoiDiagram class in the voronoi namespace, providing the following key functionalities:
 
@@ -57,7 +57,7 @@ get_edges(): Returns edges of the diagram, useful for visualization.
 get_vertices(): Returns the vertices at the intersection of the edges.
 
 
-Engineering Infrastructure
+### **Engineering Infrastructure**
 ---------------------
 The project will use:
 
@@ -69,7 +69,7 @@ GitHub Actions will be used to automatically run tests on each commit, ensuring 
 Code Documentation: 
 Documentation will be provided in both Doxygen (for C++) and Sphinx (for Python), ensuring that developers can easily extend and use the system.
 
-Schedule
+### **Schedule**
 ---------------------
 Week 1 (10/07): 
 Research existing methods (Python libraries like SciPy) and C++ implementations. 
@@ -109,6 +109,6 @@ Week 11 (12/16):
 Project presentation
 
 ---------------------
-References
+### **References**
 https://yyc.solvcon.net/en/latest/nsd/project/project_simple_array.html
  
