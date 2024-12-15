@@ -32,4 +32,4 @@ jobs:
       # Run tests
       - name: Run tests
         run: |
-          pytest test_voronoi.py
+          pytest src/test_voronoi.py
