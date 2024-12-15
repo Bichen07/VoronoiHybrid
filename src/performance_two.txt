@@ -1,0 +1,54 @@
+Number of points: 5
+SciPy method: 0.000060 seconds
+C Fortune method: 0.000005 seconds
+==========================
+Speed-up of C Fortune over SciPy: 11.57x
+
+Number of points: 20
+SciPy method: 0.000096 seconds
+C Fortune method: 0.000021 seconds
+==========================
+Speed-up of C Fortune over SciPy: 4.49x
+
+Number of points: 80
+SciPy method: 0.000254 seconds
+C Fortune method: 0.000098 seconds
+==========================
+Speed-up of C Fortune over SciPy: 2.61x
+
+Number of points: 320
+SciPy method: 0.001011 seconds
+C Fortune method: 0.000457 seconds
+==========================
+Speed-up of C Fortune over SciPy: 2.21x
+
+Number of points: 1280
+SciPy method: 0.004336 seconds
+C Fortune method: 0.002930 seconds
+==========================
+Speed-up of C Fortune over SciPy: 1.48x
+
+Number of points: 5120
+SciPy method: 0.017595 seconds
+C Fortune method: 0.015334 seconds
+==========================
+Speed-up of C Fortune over SciPy: 1.15x
+
+Number of points: 20480
+SciPy method: 0.079868 seconds
+C Fortune method: 0.088668 seconds
+==========================
+Speed-up of C Fortune over SciPy: 0.90x
+
+Number of points: 81920
+SciPy method: 0.471554 seconds
+C Fortune method: 0.623109 seconds
+==========================
+Speed-up of C Fortune over SciPy: 0.76x
+
+Number of points: 327680
+SciPy method: 2.231582 seconds
+C Fortune method: 3.864428 seconds
+==========================
+Speed-up of C Fortune over SciPy: 0.58x
+

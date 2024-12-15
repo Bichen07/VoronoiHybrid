@@ -1,0 +1,56 @@
+Number of points: 5
+SciPy method: 0.000061 seconds
+C Fortune method: 0.000005 seconds
+C halfplane method: 0.000005 seconds
+==========================
+Speed-up of C Fortune over SciPy: 11.93x
+Speed-up of C halfplane over SciPy: 11.91x
+
+Number of points: 20
+SciPy method: 0.000104 seconds
+C Fortune method: 0.000023 seconds
+C halfplane method: 0.000044 seconds
+==========================
+Speed-up of C Fortune over SciPy: 4.62x
+Speed-up of C halfplane over SciPy: 2.36x
+
+Number of points: 80
+SciPy method: 0.000280 seconds
+C Fortune method: 0.000093 seconds
+C halfplane method: 0.000569 seconds
+==========================
+Speed-up of C Fortune over SciPy: 3.01x
+Speed-up of C halfplane over SciPy: 0.49x
+
+Number of points: 320
+SciPy method: 0.001027 seconds
+C Fortune method: 0.000477 seconds
+C halfplane method: 0.008911 seconds
+==========================
+Speed-up of C Fortune over SciPy: 2.15x
+Speed-up of C halfplane over SciPy: 0.12x
+
+Number of points: 1280
+SciPy method: 0.003796 seconds
+C Fortune method: 0.002610 seconds
+C halfplane method: 0.133204 seconds
+==========================
+Speed-up of C Fortune over SciPy: 1.45x
+Speed-up of C halfplane over SciPy: 0.03x
+
+Number of points: 5120
+SciPy method: 0.018333 seconds
+C Fortune method: 0.013437 seconds
+C halfplane method: 2.282950 seconds
+==========================
+Speed-up of C Fortune over SciPy: 1.36x
+Speed-up of C halfplane over SciPy: 0.01x
+
+Number of points: 20480
+SciPy method: 0.079930 seconds
+C Fortune method: 0.089162 seconds
+C halfplane method: 39.546051 seconds
+==========================
+Speed-up of C Fortune over SciPy: 0.90x
+Speed-up of C halfplane over SciPy: 0.00x
+

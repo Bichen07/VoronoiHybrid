@@ -2,13 +2,18 @@
 CXX = g++
 CXXFLAGS = -std=c++11 -Wall -O3 -shared -fPIC `python3 -m pybind11 --includes`
 
-# Targets
-TARGET_FORTUNE = _voronoi_fortune.so
-TARGET_HALFPLANE = _voronoi_halfplane.so
+# Define the folder containing images
+IMG_FOLDER := img_result
+FILE_FOLDER := src
+IMG_PREFIX := voronoi_plot_num=
 
-# Source files
-SRCS_FORTUNE = voronoi_fortune.cc voronoi_common.hh
-SRCS_HALFPLANE = voronoi_bruteforce.cc voronoi_common.hh
+# Targets
+TARGET_FORTUNE = $(FILE_FOLDER)/_voronoi_fortune.so
+TARGET_HALFPLANE = $(FILE_FOLDER)/_voronoi_halfplane.so
+
+# Source files (located in src folder)
+SRCS_FORTUNE = $(FILE_FOLDER)/voronoi_fortune.cc $(FILE_FOLDER)/voronoi_common.hh
+SRCS_HALFPLANE = $(FILE_FOLDER)/voronoi_bruteforce.cc $(FILE_FOLDER)/voronoi_common.hh
 
 # Python include directory
 PYTHON_INCLUDE = $(shell python3-config --includes)
@@ -22,22 +27,20 @@ $(TARGET_FORTUNE): $(SRCS_FORTUNE)
 $(TARGET_HALFPLANE): $(SRCS_HALFPLANE)
 	$(CXX) $(CXXFLAGS) $(SRCS_HALFPLANE) -o $(TARGET_HALFPLANE)
 
-# Define the folder containing images
-IMG_FOLDER := img_result
-IMG_PREFIX := voronoi_plot_num=
 
-test: $(TARGET)
-	python3 -m pytest -v test_voronoi.py
 
-plot_graph: $(TARGET)
-	python3 plot_graph.py
+# Targets for testing and plotting
+test: $(TARGET_FORTUNE) $(TARGET_HALFPLANE)
+	python3 -m pytest -v $(FILE_FOLDER)/test_voronoi.py
 
-plot_performance: $(TARGET)
-	python3 plot_performance.py
+plot_graph: $(TARGET_FORTUNE) $(TARGET_HALFPLANE)
+	python3 $(FILE_FOLDER)/plot_graph.py
 
-performance: $(TARGET)
-	python3 performance.py
+plot_performance: $(TARGET_FORTUNE) $(TARGET_HALFPLANE)
+	python3 $(FILE_FOLDER)/plot_performance.py
 
+performance: $(TARGET_FORTUNE) $(TARGET_HALFPLANE)
+	python3 $(FILE_FOLDER)/performance.py
 
 # Define the clean_voronoi_graph target
 clean_voronoi_graph:
@@ -45,12 +48,12 @@ clean_voronoi_graph:
 	@rm -f $(IMG_FOLDER)/$(IMG_PREFIX)*.png
 	@echo "Cleanup complete!"
 
-# Clean target
+# Clean target (removes compiled .so files inside the src folder)
 clean:
-	rm -f $(TARGET) *.o *.so
+	rm -f $(FILE_FOLDER)/*.so $(FILE_FOLDER)/*.o
 
 clean_txt:
-	rm -rf *.txt
+	rm -rf $(FILE_FOLDER)/*.txt
 
 clean_test:
-	rm -rf __pycache__ .pytest_cache
+	rm -rf $(FILE_FOLDER)/__pycache__ $(FILE_FOLDER)/.pytest_cache
