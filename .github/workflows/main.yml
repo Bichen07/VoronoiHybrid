@@ -26,8 +26,6 @@ jobs:
     - name: contrib
       run: |
         export INSTALL_PREFIX=/usr
-        chmod +x contrib/install.sh
-        sudo ./contrib/install.sh
 
     - name: Run build
       run: make && make test
