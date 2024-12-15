@@ -3,10 +3,10 @@ name: Voronoi Diagram Testing
 on:
   push:
     branches:
-      - main
+      - master
   pull_request:
     branches:
-      - main
+      - master
 
 jobs:
   test:
@@ -32,4 +32,4 @@ jobs:
       # Run tests
       - name: Run tests
         run: |
-          pytest test_script.py
+          pytest test_voronoi.py
